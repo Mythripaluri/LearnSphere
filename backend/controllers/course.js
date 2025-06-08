@@ -31,7 +31,7 @@ exports.createCourse = async (req, res) => {
             || !category || !thumbnail || !instructions.length || !tag.length) {
             return res.status(400).json({
                 success: false,
-                message: 'All Fileds are required'
+                message: 'All Fields are required'
             });
         }
 
