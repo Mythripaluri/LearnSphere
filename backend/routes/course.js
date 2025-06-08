@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-// Import required controllers
-
 // course controllers 
 const {
     createCourse,
