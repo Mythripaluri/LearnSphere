@@ -1,104 +1,130 @@
-LearnSphere 🎓
+---
+
+LearnSphere
+
 LearnSphere is a full-stack e-learning web application designed to deliver a seamless online learning experience. Users can browse educational content, register securely, and access interactive courses. The platform features modern design, authentication, media handling with Cloudinary, and a robust backend powered by Node.js and MongoDB.
 
-🌐 Live Demo: [learn-sphere-nu.vercel.app](https://learn-sphere-nu.vercel.app/)
-📁 GitHub Repo: Mythripaluri/LearnSphere
+Live Demo: [https://learn-sphere-nu.vercel.app/](https://learn-sphere-nu.vercel.app/)
+GitHub Repo: [https://github.com/Mythripaluri/LearnSphere](https://github.com/Mythripaluri/LearnSphere)
 
-✨ Features
-🔐 Authentication: Secure user login and registration
+---
 
-📚 Course Browsing: Explore various courses with structured content
+Features
 
-🌆 Media Uploads: Efficient image handling using Cloudinary
+* Authentication: Secure user login and registration
+* Course Browsing: Explore various courses with structured content
+* Media Uploads: Efficient image handling using Cloudinary
+* Full-Stack Architecture: React front-end + Node.js/Express backend + MongoDB
+* Responsive UI: Clean and adaptable interface built with CSS
+* Deployment: Front-end deployed via Vercel
 
-🧾 Full-Stack Architecture: React front-end + Node.js/Express backend + MongoDB
+---
 
-📱 Responsive UI: Clean and adaptable interface built with CSS
+Tech Stack
 
-🌐 Deployment: Front-end deployed via Vercel
+Technology         - Usage
+React              - Front-end library for building UI
+Node.js            - JavaScript runtime for backend
+Express.js         - Web framework for Node.js
+MongoDB            - NoSQL database for storing user/course data
+Cloudinary         - Image & media hosting service
+CSS                - Styling and layout
+Vercel             - Deployment for front-end
 
-🛠️ Tech Stack
-Technology	Usage
-React	Front-end library for building UI
-Node.js	JavaScript runtime for backend
-Express.js	Web framework for Node.js
-MongoDB	Atlas database for storing user/course data
-Cloudinary	Image & media hosting service
-CSS	Styling and layout
-Vercel	Deployment for front-end
-Render Deployment for back-end
+---
 
-🚀 Getting Started
+Screenshots
+
+(Replace these with actual URLs or file paths as needed)
+
+Home Page: your-screenshot-url.com/home.png
+Login Page: your-screenshot-url.com/login.png
+Course Details: your-screenshot-url.com/course.png
+
+---
+
+Getting Started
+
 1. Clone the Repository
-git clone https://github.com/Mythripaluri/LearnSphere.git
+
+git clone [https://github.com/Mythripaluri/LearnSphere.git](https://github.com/Mythripaluri/LearnSphere.git)
 cd LearnSphere
+
 2. Install Frontend Dependencies
+
 cd client
 npm install
+
 3. Install Backend Dependencies
+
 cd ../server
 npm install
+
 4. Environment Setup
-Create a .env file in the /server directory with the following:
 
-backend env
-# Server
-PORT=5000
+Create a .env file inside the /server directory with the following keys:
 
-# MongoDB
-DATABASE_URL=your_mongodb_connection_string
-# JWT
-JWT_SECRET=your_jwt_secret
-# node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
+MONGO\_URI=your\_mongodb\_connection\_string
+JWT\_SECRET=your\_jwt\_secret
+CLOUDINARY\_CLOUD\_NAME=your\_cloud\_name
+CLOUDINARY\_API\_KEY=your\_api\_key
+CLOUDINARY\_API\_SECRET=your\_api\_secret
 
-# Razorpay
-RAZOR_KEY=razorpay_key
-RAZOR_SECRET=razorpay_secret
+---
 
-# Cloudinary
-CLOUD_NAME=your_cloud_name
-API_KEY=your_api_key
-API_SECRET=your_api_secret
-
-# Cloudinary Upload Folder
-FOLDER_NAME=cloudinary_folder_name
-
-# Nodemailer (Mail)
-MAIL_HOST=smtp.gmail.com
-MAIL_USER=your_mail_id
-MAIL_PASS=your_mail_pass
-
-frontend env
-VITE_APP_BASE_URL=https://learnsphere-0vbt.onrender.com/api/v1
-
-
-🧩 Project Structure
+Project Structure
 
 LearnSphere/
-├── frontend/              # React Front-end
+├── client/              - React Front-end
 │   ├── public/
 │   └── src/
 │       ├── components/
 │       ├── pages/
 │       └── App.jsx
-├── backend/              # Node.js Backend
+├── server/              - Node.js Backend
 │   ├── controllers/
 │   ├── models/
 │   ├── routes/
-│   ├── config/          # DB and Cloudinary config
+│   ├── config/          - DB and Cloudinary config
 │   └── index.js
-└── README.md
+└── README.txt
 
-📦 API Endpoints (Sample)
-Method	Endpoint	Description
-POST	/api/auth/signup	Register a new user
-POST	/api/auth/login	Authenticate user
-GET	/api/courses	Fetch all courses
-POST	/api/courses	Create a new course
+---
 
+Sample API Endpoints
 
-🙌 Contributing
+Method - Endpoint           - Description
+POST   - /api/auth/signup   - Register a new user
+POST   - /api/auth/login    - Authenticate user
+GET    - /api/courses       - Fetch all courses
+POST   - /api/courses       - Create a new course
+
+---
+
+To-Do
+
+* Add profile management
+* Add course progress tracking
+* Add user reviews and ratings
+* Improve accessibility (a11y)
+
+---
+
+Contributing
+
 Contributions are welcome! Please fork the repo and create a pull request with your proposed changes. For major changes, open an issue first to discuss what you’d like to add.
 
-👨‍💻 Author
+---
+
+License
+
+This project is licensed under the MIT License.
+
+---
+
+Author
+
 Developed by Mythripaluri
+GitHub: [https://github.com/Mythripaluri](https://github.com/Mythripaluri)
+
+---
