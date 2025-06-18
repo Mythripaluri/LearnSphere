@@ -1,130 +1,136 @@
----
+# LearnSphere 🎓
 
-LearnSphere
+**LearnSphere** is a full-stack e-learning web application designed to deliver a seamless online learning experience. Users can browse educational content, register securely, and access interactive courses. The platform features a modern design, authentication, media handling via Cloudinary, payment integration, and a robust backend powered by Node.js, Express, and MongoDB.
 
-LearnSphere is a full-stack e-learning web application designed to deliver a seamless online learning experience. Users can browse educational content, register securely, and access interactive courses. The platform features modern design, authentication, media handling with Cloudinary, and a robust backend powered by Node.js and MongoDB.
-
-Live Demo: [https://learn-sphere-nu.vercel.app/](https://learn-sphere-nu.vercel.app/)
-GitHub Repo: [https://github.com/Mythripaluri/LearnSphere](https://github.com/Mythripaluri/LearnSphere)
+🌐 **Live Demo**: [learn-sphere-nu.vercel.app](https://learn-sphere-nu.vercel.app)  
+📁 **GitHub Repo**: [Mythripaluri/LearnSphere](https://github.com/Mythripaluri/LearnSphere)
 
 ---
 
-Features
+## ✨ Features
 
-* Authentication: Secure user login and registration
-* Course Browsing: Explore various courses with structured content
-* Media Uploads: Efficient image handling using Cloudinary
-* Full-Stack Architecture: React front-end + Node.js/Express backend + MongoDB
-* Responsive UI: Clean and adaptable interface built with CSS
-* Deployment: Front-end deployed via Vercel
-
----
-
-Tech Stack
-
-Technology         - Usage
-React              - Front-end library for building UI
-Node.js            - JavaScript runtime for backend
-Express.js         - Web framework for Node.js
-MongoDB            - NoSQL database for storing user/course data
-Cloudinary         - Image & media hosting service
-CSS                - Styling and layout
-Vercel             - Deployment for front-end
+- 🔐 **Authentication**: Secure user login and registration  
+- 📚 **Course Browsing**: Explore various courses with structured content  
+- 🌆 **Media Uploads**: Efficient image handling using Cloudinary  
+- 🧾 **Full-Stack Architecture**: React front-end + Node.js/Express backend + MongoDB  
+- 💳 **Payment Gateway**: Razorpay integration for payments  
+- 📬 **Email Notifications**: Email sending through Nodemailer  
+- 📱 **Responsive UI**: Clean and adaptable interface built with CSS  
+- ☁️ **Deployment**: Front-end via Vercel, back-end via Render  
 
 ---
 
-Screenshots
+## 🛠️ Tech Stack
 
-(Replace these with actual URLs or file paths as needed)
-
-Home Page: your-screenshot-url.com/home.png
-Login Page: your-screenshot-url.com/login.png
-Course Details: your-screenshot-url.com/course.png
+| Technology     | Usage                                      |
+|----------------|---------------------------------------------|
+| React          | Front-end library for building UI          |
+| Node.js        | JavaScript runtime for backend             |
+| Express.js     | Web framework for Node.js                  |
+| MongoDB Atlas  | Database for storing user/course data      |
+| Cloudinary     | Media/image storage and optimization       |
+| CSS            | Styling and layout                         |
+| Razorpay       | Payment gateway integration                |
+| Nodemailer     | Sending emails (e.g., welcome, reset)      |
+| Vercel         | Front-end deployment                       |
+| Render         | Back-end deployment                        |
 
 ---
 
-Getting Started
+## 🚀 Getting Started
 
-1. Clone the Repository
+### 1. Clone the Repository
 
-git clone [https://github.com/Mythripaluri/LearnSphere.git](https://github.com/Mythripaluri/LearnSphere.git)
+```bash
+git clone https://github.com/Mythripaluri/LearnSphere.git
 cd LearnSphere
+```
 
-2. Install Frontend Dependencies
+### 2. Install Frontend Dependencies
 
-cd client
+```bash
+cd frontend
 npm install
+```
 
-3. Install Backend Dependencies
+### 3. Install Backend Dependencies
 
-cd ../server
+```bash
+cd ../backend
 npm install
+```
 
-4. Environment Setup
+### 4. Environment Variables
+Create a .env file in the /backend directory and add the following:
 
-Create a .env file inside the /server directory with the following keys:
+```bash
+# Server
+PORT=5000
 
-MONGO\_URI=your\_mongodb\_connection\_string
-JWT\_SECRET=your\_jwt\_secret
-CLOUDINARY\_CLOUD\_NAME=your\_cloud\_name
-CLOUDINARY\_API\_KEY=your\_api\_key
-CLOUDINARY\_API\_SECRET=your\_api\_secret
+# MongoDB
+DATABASE_URL=your_mongodb_connection_string
 
----
+# JWT
+JWT_SECRET=your_jwt_secret
+# (Generate one using: node -e "console.log(require('crypto').randomBytes(64).toString('hex'))")
 
-Project Structure
+# Razorpay
+RAZOR_KEY=your_razorpay_key
+RAZOR_SECRET=your_razorpay_secret
 
+# Cloudinary
+CLOUD_NAME=your_cloudinary_cloud_name
+API_KEY=your_cloudinary_api_key
+API_SECRET=your_cloudinary_api_secret
+FOLDER_NAME=your_cloudinary_folder
+
+# Nodemailer
+MAIL_HOST=smtp.gmail.com
+MAIL_USER=your_email_address
+MAIL_PASS=your_email_password
+```
+
+Also, in the /frontend directory, create a .env file:
+```bash
+VITE_APP_BASE_URL=https://learnsphere-0vbt.onrender.com/api/v1
+```
+
+### 5. Run the Development Servers
+Start backend server:
+```bash
+cd backend
+npm run dev
+```
+
+Start frontend dev server:
+```bash
+cd ../frontend
+npm run dev
+```
+
+🧩 Project Structure
+
+```bash
 LearnSphere/
-├── client/              - React Front-end
+├── frontend/               → React Front-end
 │   ├── public/
 │   └── src/
 │       ├── components/
 │       ├── pages/
 │       └── App.jsx
-├── server/              - Node.js Backend
+├── backend/                → Node.js Backend
 │   ├── controllers/
 │   ├── models/
 │   ├── routes/
-│   ├── config/          - DB and Cloudinary config
+│   ├── config/             → DB, Cloudinary, etc.
 │   └── index.js
-└── README.txt
+└── README.md
+```
 
----
+🙌 Contributing
+Contributions are welcome!
+Feel free to fork the repository and submit a pull request with your proposed changes.
+For major feature suggestions, please open an issue first to discuss them.
 
-Sample API Endpoints
-
-Method - Endpoint           - Description
-POST   - /api/auth/signup   - Register a new user
-POST   - /api/auth/login    - Authenticate user
-GET    - /api/courses       - Fetch all courses
-POST   - /api/courses       - Create a new course
-
----
-
-To-Do
-
-* Add profile management
-* Add course progress tracking
-* Add user reviews and ratings
-* Improve accessibility (a11y)
-
----
-
-Contributing
-
-Contributions are welcome! Please fork the repo and create a pull request with your proposed changes. For major changes, open an issue first to discuss what you’d like to add.
-
----
-
-License
-
-This project is licensed under the MIT License.
-
----
-
-Author
-
+👨‍💻 Author
 Developed by Mythripaluri
-GitHub: [https://github.com/Mythripaluri](https://github.com/Mythripaluri)
-
----
